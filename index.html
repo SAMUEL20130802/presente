@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu Presente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            color: #ff6f61;
+        }
+        .presentes {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .presente {
+            padding: 20px;
+            border: 2px solid #ff6f61;
+            border-radius: 10px;
+            background-color: white;
+            width: 30%;
+            cursor: pointer;
+        }
+        .presente:hover {
+            background-color: #ffe6e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Escolha o seu presente!</h1>
+        <p>Selecione um presente e descubra uma linda mensagem de amor.</p>
+        <div class="presentes">
+            <div class="presente" onclick="mostrarFrase(1)">
+                <h2>Presente 1</h2>
+                <p>Uma surpresa doce!</p>
+            </div>
+            <div class="presente" onclick="mostrarFrase(2)">
+                <h2>Presente 2</h2>
+                <p>Algo brilhante!</p>
+            </div>
+            <div class="presente" onclick="mostrarFrase(3)">
+                <h2>Presente 3</h2>
+                <p>Um carinho especial!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarFrase(presente) {
+            window.location.href = "teladeamor.html?presente=" + presente;
+        }
+    </script>
+</body>
+</html>

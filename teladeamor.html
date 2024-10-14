@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Mensagem de Amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            color: #ff6f61;
+        }
+        .mensagem {
+            margin-top: 50px;
+            font-size: 24px;
+            color: #333;
+            background-color: #ffe6e6;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Seu Presente de Amor!</h1>
+        <p>Aqui está a mensagem especial para você:</p>
+        <div class="mensagem" id="mensagem"></div>
+        <br>
+        <a href="index.html">Voltar e escolher outro presente</a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const presente = urlParams.get('presente');
+        const mensagemElement = document.getElementById('mensagem');
+
+        let mensagem = '';
+        switch (presente) {
+            case '1':
+                mensagem = 'Com você, cada momento é uma doce surpresa, onde o amor floresce em cada sorriso seu.';
+                break;
+            case '2':
+                mensagem = 'Você é o brilho que ilumina minha vida, uma estrela que nunca se apaga no meu coração.';
+                break;
+            case '3':
+                mensagem = 'Seu carinho é o refúgio mais aconchegante, onde encontro paz, amor e felicidade em cada toque seu.';
+                break;
+            default:
+                mensagem = 'Escolha um presente para ver sua mensagem de amor!';
+        }
+
+        mensagemElement.textContent = mensagem;
+    </script>
+</body>
+</html>
